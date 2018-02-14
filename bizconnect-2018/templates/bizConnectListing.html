@@ -1,0 +1,26 @@
+<ion-view title="Biz-Connect Listing" id="page1">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-ios-arrow-back" ng-click="goBack()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <ion-refresher pulling-text="Pull to refresh" refreshing-text="Refreshing" on-refresh="doRefresh()"></ion-refresher>
+    <form id="bizConnectListing-form1" class="list">
+      <label class="item item-input" id="bizConnectListing-search1">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search by any matching word" ng-model="searchData">
+      </label>
+    </form>
+    <ion-list id="bizConnectListing-list1">
+      <ion-item class="item-icon-right" id="bizConnectListing-list-item4" ui-sref="page2({&quot;name&quot;:&quot;&quot;+data.name+&quot;&quot;,&quot;website&quot;:&quot;&quot;+data.website+&quot;&quot;,&quot;majors&quot;:&quot;&quot;+data.majors+&quot;&quot;,&quot;position&quot;:&quot;&quot;+data.position+&quot;&quot;,&quot;title&quot;:&quot;&quot;+data.titlejob+&quot;&quot;,&quot;oci&quot;:&quot;&quot;+data.oci+&quot;&quot;})"
+        ng-repeat="data in results | filter: searchData">NAME:
+        <b> {{data.name}} </b>
+        <br> MAJOR:
+        <b> {{data.majors}}</b>
+        <br> POS. TYPE:
+        <b> {{data.position}} </b>
+        <i class="icon ion-android-arrow-forward"></i>
+      </ion-item>
+    </ion-list>
+    <button id="bizConnectListing-button1" ng-click="scrollTop()" class="button button-positive button-block">Scroll to the top!</button>
+  </ion-content>
+</ion-view>
