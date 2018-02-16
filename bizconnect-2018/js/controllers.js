@@ -5,7 +5,7 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $ionicScrollDelegate,$timeout, $ionicLoading, Result) {
    
-   $scope.goBack = function(){
+    $scope.goBack = function(){
        window.location="../index.html";
    }
    
@@ -60,7 +60,13 @@ function ($scope, $stateParams, $ionicScrollDelegate,$timeout, $ionicLoading, Re
     
     }, 1000);
       
+  };   
+  
+  $scope.hideScroll = function(){
+      
+      $scope.scrollHide = true;
   };
+  
   
    
 }])

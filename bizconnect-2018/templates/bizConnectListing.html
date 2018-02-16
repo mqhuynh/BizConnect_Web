@@ -7,7 +7,7 @@
     <form id="bizConnectListing-form1" class="list">
       <label class="item item-input" id="bizConnectListing-search1">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="Search by any matching word" ng-model="searchData">
+        <input type="search" placeholder="Search by any matching word" ng-model="searchData" ng-keyup="hideScroll()">
       </label>
     </form>
     <ion-list id="bizConnectListing-list1">
@@ -21,6 +21,6 @@
         <i class="icon ion-android-arrow-forward"></i>
       </ion-item>
     </ion-list>
-    <button id="bizConnectListing-button1" ng-click="scrollTop()" class="button button-positive button-block">Scroll to the top!</button>
+    <button id="bizConnectListing-button1" ng-click="scrollTop()" ng-hide="scrollHide" class="button button-positive button-block">Scroll to the top!</button>
   </ion-content>
 </ion-view>
